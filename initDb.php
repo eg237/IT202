@@ -11,10 +11,10 @@ try{
 	$db = new PDO($conn_string, $username, $password);
 	echo "Connected";
 	$query = "create table if not exist 'TestUser'(
-		'id' int auto_increment not null,
-		'username' varchar(30) not null unique,
-		'pin' int default 0,
-		PRIMARY KEY ('id')
+		`id` int auto_increment not null,
+		`username` varchar(30) not null unique,
+		`pin` int default 0,
+		PRIMARY KEY (`id`)
 		) CHARACTER SET utf8 COLLATE utf8_general_ci";
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 	$stmt = $db->prepare($query);
@@ -23,7 +23,7 @@ try{
 	echo "<br>" . ($r>0?"Created table or already exists":"Failed to create table") . "<br>";
 	unset($r);
 
-	$insert_query = "INSERT INTO 'TestUsers' ('username', 'pin') 
+	$insert_query = "INSERT INTO `TestUsers` (`username`, `pin`) 
 		VALUES (:username,:pin)";
 	$stmt = $db->prepare($insert_query);
 	$newUser = "Billy"
