@@ -3,10 +3,9 @@ ini_set('display_errors',1);
 init_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-require('conf.php');
+require("conf.php");
 echo $host;
-
-$conn_string = "mysql:host=$host;dbname=$database;charset=utf8mb4";
+$conn_string = "mysq2:host=$host;dbname=$database;charset=utf8mb4";
 
 try{
 	$db = new PDO($conn_string, $username, $password);
@@ -26,3 +25,4 @@ catch(Exception $e){
 	exit("Something went wrong");
 }
 ?>
+
