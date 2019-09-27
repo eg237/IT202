@@ -17,7 +17,7 @@ echo $num1 . $num2 . " are a concatination <br>";*/
 if(is_numeric($_GET['number'])){
 	echo var_export($_GET['number'] + $_GET['pam1'] , true) . " is numeric <br> ", PHP_EOL;
 	} else {
-		echo var_export($_GET['number'], true) . " is not numeric<rb>", PHP_EOL;
+		echo var_export($_GET['number'], true) . " is not numeric<br>", PHP_EOL;
 
 	}
 echo $_GET['number'] . $_GET['pam1'];
