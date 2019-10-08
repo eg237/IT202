@@ -32,6 +32,6 @@ function getName(){
 </html>
 
 <?php
-if(issset($_GET)){
+if(isset($_GET)){
 	echo "<br><pre>" . var_export($_GET, true) . "</pre><br>";
 }
