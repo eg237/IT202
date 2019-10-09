@@ -11,14 +11,18 @@ function getName(){
 <html>
 <head></head>
 <body><?php getName();?>
-<form mode="GET" action="#">
-<input name="name" type="text" placeholder="Enter your name"/>
+<form method="POST" action="#">
 
 <!-- add password field-->
 <div>
 	<label for ="username">Username:</label>
 	<input type ="text" id="username"
 name="username">
+<div>
+	<label for="email"> Email </label>
+	<input name="Email" type="email" placeholder="name@example.com"/>
+	<span id="validation.email" style="display:none;"></span>
+</div>
 </div>
 
 <!-- add confirm password field-->
