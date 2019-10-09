@@ -77,7 +77,7 @@ input { border: 1px solid black; }
 <span style="display:none;" id="validation.password"></span>
 
  Add dropdown element (something specific to your project) -->
-<select name="title" require>
+<select require>
 	<option value = ""> Select One</option>
 	<option value = "1">One</option>
 	<option value = "2">Two</option>
