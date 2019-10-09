@@ -68,9 +68,9 @@ input { border: 1px solid black; }
 </style>
 </head>
 <body>
-<!---<div style="margin-left: 50%; margin-right:50%;">
+<div style="margin-left: 50%; margin-right:50%;">
 <form method="POST" action="#" onsubmit="return validate();">
-<input name="name" type="text" placeholder="Enter your name"/>
+<!--<input name="name" type="text" placeholder="Enter your name"/>
 
 <input name="email" type="email" placeholder="name@example.com"/>
 <span id="validation.email" style="display:none;"></span>
