@@ -80,6 +80,12 @@ input { border: 1px solid black; }
 <span style="display:none;" id="validation.password"></span>
 
 <!-- Add dropdown element (something specific to your project) -->
+<select>
+	<option value = "Select One"> Select One</option>
+	<option value = "One">One</option>
+	<option value = "Two">Two</option>
+	<option value = "Three">Three</option>
+</select>
 <input type="submit" value="Try it"/>
 </form>
 </div>
