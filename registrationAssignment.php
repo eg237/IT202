@@ -81,7 +81,7 @@ input { border: 1px solid black; }
 
 <!-- Add dropdown element (something specific to your project) -->
 <select require>
-	<option value = "Select One"> Select One</option>
+	<option value = ""> Select One</option>
 	<option value = "One">One</option>
 	<option value = "Two">Two</option>
 	<option value = "Three">Three</option>
