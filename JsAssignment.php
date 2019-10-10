@@ -28,6 +28,13 @@ function myValidation(inputEle, checkValue){
 <form onsubmit="return false;">
 <input type="text" name="test" placeholder="Trying it out" 
 	onchange="myValidation(this, 'hi');"/>
+<input name="email" type="email"/>
+<input name="emailconfirm" type="email"/>
+<input name="password" type="password"/>
+<input name="passwordconfirm" type="password"/>
+<input name="username"/>
+
+<input type="submit" value="Submit"/>
 </form>
 </body>
 </html>
