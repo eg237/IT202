@@ -67,7 +67,7 @@ input { border: 1px solid black; }
 <body>
 <div style="margin-left: 50%; margin-right:50%;">
 <form method="POST" action="#" onsubmit="return validate();">
-<!--<input name="name" type="text" placeholder="Enter your name"/>
+<input name="name" type="text" placeholder="Enter your name"/>
 
 <input name="email" type="email" placeholder="name@example.com"/>
 <span id="validation.email" style="display:none;"></span>
@@ -76,7 +76,7 @@ input { border: 1px solid black; }
 <input type="password" name="confirm" placeholder="Re-Enter password"/>
 <span style="display:none;" id="validation.password"></span>
 
- Add dropdown element (something specific to your project) -->
+ <!---Add dropdown element (something specific to your project) -->
 <select require>
 	<option value = ""> Select One</option>
 	<option value = "1">One</option>
