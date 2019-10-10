@@ -32,7 +32,7 @@ function myValidation(inputEle, checkValue){
 <input name="emailconfirm" type="email" placeholder = "Confirm Email"/>
 <input name="password" type="password" placeholder = "Password"/>
 <input name="passwordconfirm" type="password" placeholder = "Confirm PAssword"/>
-<input name="username"/>
+<input name="username" type = "text" palceholder = "Username" />
 
 <input type="submit" value="Submit"/>
 </form>
