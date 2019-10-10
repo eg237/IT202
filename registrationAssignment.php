@@ -55,6 +55,12 @@ function validate(){
 	First element should be "Select One", and it should require that
 	some other value is selected in order to proceed
 	*/
+	var sel = form.dd;
+	if (sel.selectedIndex == 0){
+			alert("Please pick a Value");
+			succeeded = false;
+
+	}
 	return succeeded;	
 }
 </script>
@@ -77,7 +83,7 @@ input { border: 1px solid black; }
 <span style="display:none;" id="validation.password"></span>
 
  <!---Add dropdown element (something specific to your project) -->
-<select require>
+<select name = "dd"require>
 	<option value = ""> Select One</option>
 	<option value = "1">One</option>
 	<option value = "2">Two</option>
