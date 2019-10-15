@@ -27,7 +27,7 @@ function myValidation(inputEle, checkValue){
 <body>
 <form onsubmit="return false;">
 <input type="text" name="test" placeholder="Trying it out" 
-	onchange="myValidation(this, 'hi');"/>
+	onchange="myValidation(this, '');"/>
 <input name="email" type="email" placeholder = "Email"/> 
 <input name="emailconfirm" type="email" placeholder = "Confirm Email"/>
 <input name="password" type="password" placeholder = "Password"/>
