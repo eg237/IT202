@@ -234,8 +234,15 @@
         canvas.focus();
     </script>
 </head>
+<style>
+    #canvas {
+        width: 600px;
+        height: 400px;
+        border: 1px solid black;
+    }
+</style>
 
-<body>
+<body onload="makeSquare();">
     <main>
         <canvas id="canvas" width="600" height="400" tabindex="1"></canvas>
     </main>
