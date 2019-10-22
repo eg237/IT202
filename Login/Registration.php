@@ -9,7 +9,7 @@
 <body>
     <div>
         <?php
-        if(isset($_POST['Create'])){
+        if(isset($_POST['create'])){
 
         }
         ?>
@@ -21,18 +21,18 @@
                 <h1>Registration</h1>
                 <p>Fill up the form with correct Values.</p>
                 <label for="firstname"><b>First Name</b></label>
-                <input type="text" name="firstname" require>
+                <input type="text" name="firstname" required>
 
                 <label for="lastName"><b>Last Name</b></label>
-                <input type="text" name="lastName" require>
+                <input type="text" name="lastName" required>
 
                 <label for="email"><b>Email Address</b></label>
-                <input type="email" name="email" require>
+                <input type="email" name="email" required>
 
                 <label for="password"><b>Password</b></label>
-                <input type="password" name="password" require>
+                <input type="password" name="password" required>
 
-                <input type="submit" name="Create" value="Sign Up" require>
+                <input type="submit" name="create" value="Sign Up" required>
             </div>
     </div>
 </body>
