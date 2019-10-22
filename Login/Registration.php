@@ -29,14 +29,19 @@
                         <h1>Registration</h1>
                         <p>Fill up the form with correct Values.</p>
                         <hr class="mb-3">
+
                         <label for="firstname"><b>First Name</b></label>
                         <input type="text" name="firstname" required>
+
                         <label for="lastName"><b>Last Name</b></label>
                         <input type="text" name="lastName" required>
+
                         <label for="email"><b>Email Address</b></label>
                         <input type="email" name="email" required>
+                        <br>
                         <label for="password"><b>Password</b></label>
                         <input type="password" name="password" required>
+
                         <hr class="mb-3">
                         <input class="btn btn-primary" type="submit" name="create" value="Sign Up" required>
                     </div>
