@@ -11,7 +11,12 @@
     <div>
         <?php
         if(isset($_POST['create'])){
-            echo 'User Submitted'
+            $fisrtname   = $_POST['firstname'];
+            $lastname    = $_POST['lastname'];
+            $email       = $_POST['email'];
+            $password    = $_POST['password'];
+
+            echo $fistname, " ", $lastname , " ", $email, " " , $password;
         }
         ?>
     </div>
