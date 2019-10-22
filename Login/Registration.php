@@ -1,3 +1,6 @@
+<?php
+require_once('config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +18,15 @@
             $lastname    = $_POST['lastname'];
             $email       = $_POST['email'];
             $password    = $_POST['password'];
+            
+            $sql = "INSERT INTO users (firstname, lastname, email, password ) VALUES(?,?,?,?)";
+            $stmtinsert = $db->prepare($sql);
+            $result = $stmtinsert->execute([$firstname, $lastname, $email, $password]);
+            if($result){
+                echo 'Successfully saved.';
+            }else{
+                echo 'There were errors while saving teh data';
+            }
 
             echo $firstname, " ", $lastname , " ", $email, " " , $password;
         }
@@ -24,6 +36,7 @@
     <div>
         <form action="Registration.php" method="post">
             <div class="container">
+                
                 <div class="row">
                     <div class="col-sm-3">
                         <h1>Registration</h1>
