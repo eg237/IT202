@@ -8,6 +8,14 @@
 </head>
 <body>
     <div>
+        <?php
+        if(isset($_POST['Create'])){
+
+        }
+        ?>
+    </div>
+
+    <div>
         <form action="registration.php" method="post">
             <div class="container">
                 <h1>Registration</h1>
@@ -23,6 +31,8 @@
 
                 <label for="password"><b>Password</b></label>
                 <input type="password" name="password">
+
+                <input type="submit" name="Create" value="Sign Up">
             </div>
     </div>
 </body>
