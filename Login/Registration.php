@@ -37,7 +37,7 @@
                         <input type="password" name="password" required>
                         <br>
                         <hr class="mb-3">
-                        <input type="submit" name="create" value="Sign Up" required>
+                        <input class="btn btn-primary" type="submit" name="create" value="Sign Up" required>
                     </div>
                 </div>
             </div>
