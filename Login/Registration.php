@@ -23,6 +23,7 @@
                     <div class="col-sm-3">
                         <h1>Registration</h1>
                         <p>Fill up the form with correct Values.</p>
+                        <hr class="mb-3">
                         <label for="firstname"><b>First Name</b></label>
                         <input type="text" name="firstname" required>
                         <br>
@@ -35,6 +36,7 @@
                         <label for="password"><b>Password</b></label>
                         <input type="password" name="password" required>
                         <br>
+                        <hr class="mb-3">
                         <input type="submit" name="create" value="Sign Up" required>
                     </div>
                 </div>
