@@ -1,4 +1,5 @@
 <?php
+// require once not working
 //require_once('config.php');
 ?>
 <!DOCTYPE html>
@@ -19,14 +20,14 @@
             $email       = $_POST['email'];
             $password    = $_POST['password'];
             
-        //     $sql = "INSERT INTO users (firstname, lastname, email, password ) VALUES(?,?,?,?)";
-        //     $stmtinsert = $db->prepare($sql);
-        //     $result = $stmtinsert->execute([$firstname, $lastname, $email, $password]);
-        //     if($result){
-        //         echo 'Successfully saved.';
-        //     }else{
-        //         echo 'There were errors while saving the data';
-        //     }
+            $sql = "INSERT INTO users (firstname, lastname, email, password ) VALUES(?,?,?,?)";
+            $stmtinsert = $db->prepare($sql);
+            $result = $stmtinsert->execute([$firstname, $lastname, $email, $password]);
+            if($result){
+                echo 'Successfully saved.';
+            }else{
+                echo 'There were errors while saving the data';
+            }
 
              echo $firstname, " ", $lastname , " ", $email, " " , $password;
         }
