@@ -1,75 +1,89 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-
 </head>
 <style>
     #canvas {
         width: 600px;
         height: 400px;
         border: 1px solid black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    #sprites {
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
 </style>
 
 <body onload="makeSquare();">
     <main>
-        <canvas id="canvas" width="600px" height="400px" tabindex="1"></canvas>
-    </main>
+        <!-- sprites -->
+        <img src="./assets/ship.png" style="display: none;" id="ship">
+        <img src="./assets/bullet.png" style="display: none;" id="bullet">
+        <!-- sprites -->
 
+
+        <canvas id="canvas" width="600" height="400" tabindex="1"></canvas>
+        <canvas id="sprites" width="600" height="400" tabindex="1"></canvas>
+    </main>
     <script>
         // Arcade Shooter game
-
         // Get a reference to the canvas DOM element
         var canvas = document.getElementById('canvas');
+        var ui = document.getElementById('sprites');
         // Get the canvas drawing context
         var context = canvas.getContext('2d');
-
+        var context2 = ui.getContext('2d');
         // Create an object representing a square on the canvas
-        function makeSquare(x, y, length, speed) {
+        function makeSquare(x, y, length, speed, imagePath) {
             return {
+                imagePath: imagePath,
                 x: x,
                 y: y,
                 l: length,
                 s: speed,
-                draw: function() {
-                    context.fillRect(this.x, this.y, this.l, this.l);
+                draw: function () {
+                    if (imagePath) {
+                        imageChange(this.imagePath, this.x, this.y, this.l);
+                    } else {
+                        context.fillRect(this.x, this.y, this.l, this.l);
+                    }
                 }
             };
         }
-
         // The ship the user controls
-        var ship = makeSquare(50, canvas.height / 2 - 25, 50, 5);
-
+        var ship = makeSquare(50, canvas.height / 2 - 25, 100, 5, "ship");
         // Flags to tracked which keys are pressed
         var up = false;
         var down = false;
         var space = false;
-
         // Is a bullet already on the canvas?
         var shooting = false;
         // The bulled shot from the ship
-        var bullet = makeSquare(0, 0, 10, 10);
-
+        var bullet = makeSquare(0, 0, 10, 10, null);
         // An array for enemies (in case there are more than one)
         var enemies = [];
-
         // Add an enemy object to the array
         var enemyBaseSpeed = 2;
-
         function makeEnemy() {
             var enemyX = canvas.width;
-            var enemySize = Math.round((Math.random() * 15)) + 15;
+            var enemySize = 30;
             var enemyY = Math.round(Math.random() * (canvas.height - enemySize * 2)) + enemySize;
             var enemySpeed = Math.round(Math.random() * enemyBaseSpeed) + enemyBaseSpeed;
-            enemies.push(makeSquare(enemyX, enemyY, enemySize, enemySpeed));
+            enemies.push(makeSquare(enemyX, enemyY, enemySize, enemySpeed, null));
         }
-
         // Check if number a is in the range b to c (exclusive)
         function isWithin(a, b, c) {
             return (a > b && a < c);
         }
-
         // Return true if two squares a and b are colliding, false otherwise
         function isColliding(a, b) {
             var result = false;
@@ -80,14 +94,12 @@
             }
             return result;
         }
-
         // Track the user's score
         var score = 0;
         // The delay between enemies (in milliseconds)
         var timeBetweenEnemies = 5 * 1000;
         // ID to track the spawn timeout
         var timeoutId = null;
-
         // Show the game menu and instructions
         function menu() {
             erase();
@@ -100,9 +112,9 @@
             context.font = '18px Arial';
             context.fillText('Up/Down to move, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 3);
             // Start the game on a click
-            canvas.addEventListener('click', startGame);
+            ui.addEventListener('click', startGame);
+            ui.removeEventListener('click', menu);
         }
-
         // Start the game
         function startGame() {
             // Kick off the enemy spawn interval
@@ -112,23 +124,30 @@
             // Kick off the draw loop
             draw();
             // Stop listening for click events
-            canvas.removeEventListener('click', startGame);
-        }
+            ui.removeEventListener('click', startGame);
 
+        }
         // Show the end game screen
         function endGame() {
             // Stop the spawn interval
             clearInterval(timeoutId);
             // Show the final score
             erase();
+
+            //Reseting variables
+            enemies = [];
+            lifes = 1;
+            gameOver = false;
+
             context.fillStyle = '#000000';
             context.font = '24px Arial';
             context.textAlign = 'center';
             context.fillText('Game Over. Final Score: ' + score, canvas.width / 2, canvas.height / 2);
-        }
+            ui.addEventListener('click', menu);
 
+        }
         // Listen for keydown events
-        canvas.addEventListener('keydown', function(event) {
+        ui.addEventListener('keydown', function (event) {
             event.preventDefault();
             if (event.keyCode === 38) { // UP
                 up = true;
@@ -140,9 +159,8 @@
                 shoot();
             }
         });
-
         // Listen for keyup events
-        canvas.addEventListener('keyup', function(event) {
+        ui.addEventListener('keyup', function (event) {
             event.preventDefault();
             if (event.keyCode === 38) { // UP 
                 up = false;
@@ -151,13 +169,14 @@
                 down = false;
             }
         });
-
         // Clear the canvas
         function erase() {
-            context.fillStyle = '#FFFFFF';
-            context.fillRect(0, 0, 600, 400);
-        }
+            // context.fillStyle = '#FFFFFF';
+            // context.fillRect(0, 0, 600, 400);
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context2.clearRect(0, 0, canvas.width, canvas.height);
 
+        }
         // Shoot the bullet (if not already on screen)
         function shoot() {
             if (!shooting) {
@@ -167,23 +186,39 @@
             }
         }
 
+        function imageChange(name, x, y, length) {
+            let img = document.getElementById(name);
+            context2.drawImage(img, x, y, length, length);
+        }
+
+
         // The main draw loop
         function draw() {
             erase();
             var gameOver = false;
+            let lifes = 3;
+
             // Move and draw the enemies
-            enemies.forEach(function(enemy) {
+            enemies.forEach(function (enemy) {
                 enemy.x -= enemy.s;
                 if (enemy.x < 0) {
-                    gameOver = true;
+                    if (lifes > 1) {
+                        lifes--
+                    } else {
+                        gameOver = true;
+                    }
                 }
                 context.fillStyle = '#00FF00';
                 enemy.draw();
             });
             // Collide the ship with enemies
-            enemies.forEach(function(enemy, i) {
+            enemies.forEach(function (enemy, i) {
                 if (isColliding(enemy, ship)) {
-                    gameOver = true;
+                    if (lifes > 1) {
+                        lifes--
+                    } else {
+                        gameOver = true;
+                    }
                 }
             });
             // Move the ship
@@ -203,12 +238,13 @@
             // Draw the ship
             context.fillStyle = '#FF0000';
             ship.draw();
+
             // Move and draw the bullet
             if (shooting) {
                 // Move the bullet
                 bullet.x += bullet.s;
                 // Collide the bullet with enemies
-                enemies.forEach(function(enemy, i) {
+                enemies.forEach(function (enemy, i) {
                     if (isColliding(bullet, enemy)) {
                         enemies.splice(i, 1);
                         score++;
@@ -235,15 +271,22 @@
             context.fillStyle = '#000000';
             context.font = '24px Arial';
             context.textAlign = 'left';
-            context.fillText('Score: ' + score, 1, 25)
-                // End or continue the game
+            context.fillText('Score: ' + score, 10, 30)
+
+            // Draw the Lifes
+            context.fillStyle = '#000000';
+            context.font = '24px Arial';
+            context.textAlign = 'right';
+            context.fillText('Lifes: ' + lifes, canvas.width - 10, 30)
+            // End or continue the game
             if (gameOver) {
                 endGame();
+
+
             } else {
                 window.requestAnimationFrame(draw);
             }
         }
-
         // Start the game
         menu();
         canvas.focus();
