@@ -38,6 +38,7 @@
 
                         <label for="email"><b>Email Address</b></label>
                         <input type="email" name="email" required>
+                        
                         <br>
                         <label for="password"><b>Password</b></label>
                         <br>
