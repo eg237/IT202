@@ -28,8 +28,8 @@ require_once('config.php');
         //         echo 'There were errors while saving the data';
         //     }
 
-        //     echo $firstname, " ", $lastname , " ", $email, " " , $password;
-        // }
+             echo $firstname, " ", $lastname , " ", $email, " " , $password;
+        }
         ?>
     </div>
 
