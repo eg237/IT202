@@ -5,7 +5,13 @@ $db_user = "eg237";
 $db_pass = "LL9acXZx";
 $db_name = "eg237";
 
-$conn =mysqli_connect($servername, $db_user, $db_pass, $db_name);
+$firstname   = $_POST['firstname'];
+$lastname    = $_POST['lastname'];
+$email       = $_POST['email'];
+$password    = $_POST['password'];
+
+//$conn =mysqli_connect($servername, $db_user, $db_pass, $db_name);
+$conn = new mysqli_connect($servername, $db_user, $db_pass, $db_name);
 if(!$conn){
     die("Connection Failed: ".mysqli_connect_error());
 }else{
