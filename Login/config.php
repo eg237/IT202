@@ -1,8 +1,8 @@
  <?php
 
 $servername="sql2.njit.edu";
-$db_user = "root";
-$db_pass = "";
+$db_user = "eg237";
+$db_pass = "LL9acXZx";
 $db_name = "eg237";
 
 $conn =mysqli_connect($servername, $db_user, $db_pass, $db_name);
