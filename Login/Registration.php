@@ -1,6 +1,6 @@
 <?php
 // require once not working
-//require_once('config.php');
+require('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
