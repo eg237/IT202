@@ -36,7 +36,7 @@ require('config.php');
     </div>
 
     <div>
-        <form action="Registration.php" method="post">
+        <form action="Registration.php" method="POST">
             <div class="container">
                 
                 <div class="row">
