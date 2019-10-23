@@ -1,6 +1,6 @@
 <?php
 // require once not working
-require('config.php');
+//require('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,7 @@ require('config.php');
 <body>
     <div>
         <?php
+        require('config.php');
         if(isset($_POST['create'])){
             $firstname   = $_POST['firstname'];
             $lastname    = $_POST['lastname'];
