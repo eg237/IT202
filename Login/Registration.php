@@ -1,6 +1,6 @@
 <?php
 // require once not working
-//require('config.php');
+include_once('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@
     </div>
 
     <div>
-        <form action="Registration.php" method="post">
+        <form action="config.php" method="post">
             <div class="container">
                 
                 <div class="row">
