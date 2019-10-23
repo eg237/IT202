@@ -15,11 +15,11 @@ require('config.php');
     <div>
         <?php
         //require('config.php');
-        // if(isset($_POST['create'])){
-        //     $firstname   = $_POST['firstname'];
-        //     $lastname    = $_POST['lastname'];
-        //     $email       = $_POST['email'];
-        //     $password    = $_POST['password'];
+        if(isset($_POST['create'])){
+            $firstname   = $_POST['firstname'];
+            $lastname    = $_POST['lastname'];
+            $email       = $_POST['email'];
+            $password    = $_POST['password'];
             
         //     $sql = "INSERT INTO users (firstname, lastname, email, password ) VALUES(?,?,?,?)";
         //     $stmtinsert = $db->prepare($sql);
