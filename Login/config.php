@@ -18,14 +18,14 @@ $db_name = "eg237";
 //     $stmt->close();
 //     $conn->close();
 // }
-try{
+//try{
 $conn = new PDO('mysql:host=$servername;dbname=' . $db_name . ';charset=utf8', $db_user, $db_pass);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 echo "Connection Successful";
-}
-catch(PDOExeption $e){
-    echo "Connection Failed: " . $e->getMessage(); 
-}
+// }
+// catch(PDOExeption $e){
+//     echo "Connection Failed: " . $e->getMessage(); 
+// }
 
 // $host="sql2.njit.edu";//your msql host [sql1, sql2, sql3]
 // $database="eg237";//ucid
