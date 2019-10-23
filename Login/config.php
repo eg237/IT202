@@ -5,11 +5,6 @@ $db_user = "eg237";
 $db_pass = "LL9acXZx";
 $db_name = "eg237";
 
-$firstname   = $_POST['firstname'];
-$lastname    = $_POST['lastname'];
-$email       = $_POST['email'];
-$password    = $_POST['password'];
-
 //$conn =mysqli_connect($servername, $db_user, $db_pass, $db_name);
 $conn = new mysqli_connect($servername, $db_user, $db_pass, $db_name);
 if(!$conn){
