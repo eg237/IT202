@@ -9,7 +9,7 @@ $db=mysqli_connect($servername, $db_user, $db_pass, $db_name);
 
 //try{
 //$conn = new PDO('mysql:host=$servername;dbname=' . $db_name . ';charset=utf8', $db_user, $db_pass);
-//$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //echo "Connection Successful";
 // }
 // catch(PDOExeption $e){

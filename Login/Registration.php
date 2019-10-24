@@ -1,6 +1,9 @@
 <?php
 // require once not working
 include_once('config.php');
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +24,13 @@ include_once('config.php');
             $email       = $_POST['email'];
             $password    = $_POST['password'];
             
-            $sql = "INSERT INTO users (firstname, lastname, email, password ) VALUES(?,?,?,?)";
+            $sql = "INSERT INTO `UserAccounts` (firstname, lastname, email, pass ) VALUES(?,?,?,?)";
             $stmtinsert = $db->prepare($sql);
-            $result = $stmtinsert->execute([$firstname, $lastname, $email, $password]);
+            $result = $stmtinsert->execute();
             if($result){
                 echo 'Successfully saved.';
             }else{
-                echo 'There were errors while saving the data';
+                echo 'There were errors while saving the data ';
             }
 
              echo $firstname, " ", $lastname , " ", $email, " " , $password;
@@ -48,8 +51,8 @@ include_once('config.php');
                         <label for="firstname"><b>First Name</b></label>
                         <input type="text" name="firstname" required>
 
-                        <label for="lastName"><b>Last Name</b></label>
-                        <input type="text" name="lastName" required>
+                        <label for="lastname"><b>Last Name</b></label>
+                        <input type="text" name="lastname" required>
 
                         <label for="email"><b>Email Address</b></label>
                         <input type="email" name="email" required>
