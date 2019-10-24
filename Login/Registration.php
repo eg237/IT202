@@ -27,7 +27,7 @@ error_reporting(E_ALL);
             $sql = "INSERT INTO `UserAccounts` (firstname, lastname, email, pass ) VALUES(?,?,?,?)";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
-            $error = $stmtinsert->errorInfo();
+            $error = $db->error;
             // if($error && $error[0] !== '0000'){}
             if($result){
                 echo 'Successfully saved.';
