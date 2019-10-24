@@ -39,7 +39,7 @@ error_reporting(E_ALL);
     </div>
 
     <div>
-        <form action="config.php" method="post">
+        <form action="Registration.php" method="post">
             <div class="container">
                 
                 <div class="row">
