@@ -27,11 +27,14 @@ error_reporting(E_ALL);
             $sql = "INSERT INTO `UserAccounts` (firstname, lastname, email, pass ) VALUES(?,?,?,?)";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
-            if($result){
-                echo 'Successfully saved.';
-            }else{
-                echo 'There were errors while saving the data ';
+            if($db->connect_error){
+                die("Connection Failed: " . $db->connect_error);
             }
+            // if($result){
+            //     echo 'Successfully saved.';
+            // }else{
+            //     echo 'There were errors while saving the data ';
+            // }
 
              echo $firstname, " ", $lastname , " ", $email, " " , $password;
         }

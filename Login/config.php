@@ -6,9 +6,7 @@ $db_pass = "LL9acXZx";
 $db_name = "eg237";
 
 $db=mysqli_connect($servername, $db_user, $db_pass, $db_name);
-if($db->connect_error){
-    die("Connection Failed: " . $db->connect_error);
-}
+
 
 //try{
 //$conn = new PDO('mysql:host=$servername;dbname=' . $db_name . ';charset=utf8', $db_user, $db_pass);
