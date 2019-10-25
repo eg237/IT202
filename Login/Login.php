@@ -11,10 +11,10 @@
     <div class="row">
         <div class="col-sm-3">
             <form action="" method="post">
-                Username:<br/>
-                <input type="text" name="username"><br/>
+                Email:<br/>
+                <input type="email" name="email" require><br/>
                 Password:<br/>
-                <input type="password" name="password"><br/>
+                <input type="password" name="password" require><br/>
                 <input class="btn btn-primary" type="submit" value="Login!">
             </form>
             <form action="Registration.php" method="post">
