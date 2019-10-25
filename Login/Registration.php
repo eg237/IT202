@@ -77,7 +77,7 @@ error_reporting(E_ALL);
             Swal.fire({
                 'title':'Hello World',
                 'text':'This is from SweetAlert2',
-                'type': 'Success',
+                'type': 'success',
             })
         })
     </script>
