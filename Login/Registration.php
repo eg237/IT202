@@ -19,12 +19,11 @@ error_reporting(E_ALL);
         <?php
         //require('config.php');
         if(isset($_POST['create'])){
-            $firstname   = $_POST['firstname'];
-            $lastname    = $_POST['lastname'];
+            $username   = $_POST['username'];
             $email       = $_POST['email'];
             $password    = $_POST['password'];
             
-            $sql = "INSERT INTO `UserAccounts`(`firstname`, `lastname`, `email`, `pass`) VALUES ('$firstname','$lastname','$email','$password')";
+            $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$password')";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
             if($result){
@@ -46,11 +45,8 @@ error_reporting(E_ALL);
                         <p>Fill up the form with correct Values.</p>
                         <hr class="mb-3">
 
-                        <label for="firstname"><b>First Name</b></label>
-                        <input type="text" name="firstname" required>
-
-                        <label for="lastname"><b>Last Name</b></label>
-                        <input type="text" name="lastname" required>
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" name="username" required>
 
                         <label for="email"><b>Email Address</b></label>
                         <input type="email" name="email" required>
