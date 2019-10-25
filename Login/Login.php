@@ -16,7 +16,7 @@
                 Password:<br/>
                 <input type="password" name="password"><br/>
                 <input class="btn btn-primary" type="submit" value="Login!">
-                <input class="btn btn-primary" type="submit" name="create" value="Sign Up" required>
+                <input href="Registration.php" class="btn btn-primary" type="submit" value="Sign Up" >
             </form>
         </div>
     </div>
