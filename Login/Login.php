@@ -13,9 +13,10 @@
         Password:<br/>
         <input type="password" name="password"><br/>
         <input type="submit" value="Login!">
-        <input type="submit" href="Registration.php" value="Sign Up">
     </form>
-    <a href="Registration.php">SignUp</a>
+    <form action="Registration.php" method="post">
+        <input type="submit" value="Sign Up">
+    </form>
 </body>
 </html>
 
