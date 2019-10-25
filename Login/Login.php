@@ -13,6 +13,7 @@
         Password:<br/>
         <input type="password" name="password"><br/>
         <input type="submit" value="Login!">
+        <input type="submit" href="Registration.php" value="Sign Up">
     </form>
 </body>
 </html>
