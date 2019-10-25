@@ -27,7 +27,6 @@ error_reporting(E_ALL);
             $sql = "INSERT INTO `UserAccounts`(`firstname`, `lastname`, `email`, `pass`) VALUES ('$firstname','$lastname','$email','$password')";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
-            // if($error && $error[0] !== '0000'){}
             if($result){
                 echo 'Successfully saved.';
             }else{
@@ -75,8 +74,8 @@ error_reporting(E_ALL);
         $(function(){
             // alert("Hello");
             Swal.fire({
-                'title':'Hello World',
-                'text':'This is from SweetAlert2',
+                'title':'Register',
+                'text':'Only use Credentials you will Remember',
                 'type': 'success',
             })
         })
