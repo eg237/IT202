@@ -10,10 +10,10 @@
     <nav>
         <a href="#"></a>
         <ul>
-            <li><a href="#">Test</a></li>
+            <li><a href="index.php">Test</a></li>
             <li><a href="#">Ports</a></li>
             <li><a href="#">Spagetti</a></li>
-            <li><a href="#">Rigatonni</a></li>
+            <li><a href="Registration.php">Register</a></li>
         </ul>
     </nav>
 </header>
