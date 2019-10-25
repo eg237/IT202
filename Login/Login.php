@@ -7,16 +7,21 @@
     <title>User Login | PHP</title>
 </head>
 <body>
-    <form action="" method="post">
-        Username:<br/>
-        <input type="text" name="username"><br/>
-        Password:<br/>
-        <input type="password" name="password"><br/>
-        <input type="submit" value="Login!">
-    </form>
-    <form action="Registration.php" method="post">
-        <input type="submit" value="Sign Up">
-    </form>
+    <div class="row">
+        <div class="col-sm-3">
+            <form action="" method="post">
+                Username:<br/>
+                <input type="text" name="username"><br/>
+                Password:<br/>
+                <input type="password" name="password"><br/>
+                <input class="btn btn-primary" type="submit" value="Login!">
+            </form>
+            <form action="Registration.php" method="post">
+            <hr class="mb-3">
+            <input class="btn btn-primary" type="submit" name="create" value="Sign Up" required>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 
