@@ -70,9 +70,15 @@ error_reporting(E_ALL);
             </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script type="text/javascript">
         $(function(){
-            alert("Hello");
+            // alert("Hello");
+            Swal.fire({
+                'title':'Hello World',
+                'text':'This is from SweetAlert2',
+                'type': 'Success',
+            })
         })
     </script>
 </body>
