@@ -24,7 +24,7 @@ error_reporting(E_ALL);
             $email       = $_POST['email'];
             $password    = $_POST['password'];
             
-            $sql = "INSERT INTO `UserAccounts` (firstname, lastname, email, pass ) VALUES(?,?,?,?)";
+            $sql = "INSERT INTO `UserAccounts`(`id`, `firstname`, `lastname`, `email`, `pass`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
             $error = $db->error;
