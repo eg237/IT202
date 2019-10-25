@@ -18,6 +18,7 @@
                 <input class="btn btn-primary" type="submit" value="Login!">
             </form>
             <form action="Registration.php" method="post">
+                <br>
                 <input href="Registration.php" class="btn btn-primary" type="submit" value="Sign Up" >
             </form>
         </div>
