@@ -6,19 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Login | PHP</title>
 </head>
-<header>
-    <nav>
-        <a href="#"></a>
-        <ul>
-            <li><a href="index.php">Test</a></li>
-            <li><a href="#">Ports</a></li>
-            <li><a href="#">Spagetti</a></li>
-            <li><a href="Registration.php">Sign Up</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
-    
+    <form action="" method="post">
+        Username:<br/>
+        <input type="text" name="username"><br/>
+        Password:<br/>
+        <input type="password" name="password"><br/>
+        <input type="submite" value="Login!">
+    </form>
 </body>
 </html>
