@@ -16,6 +16,8 @@
                 Password:<br/>
                 <input type="password" name="password"><br/>
                 <input class="btn btn-primary" type="submit" value="Login!">
+            </form>
+            <form action="Registration.php" method="post">
                 <input href="Registration.php" class="btn btn-primary" type="submit" value="Sign Up" >
             </form>
         </div>
