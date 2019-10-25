@@ -8,20 +8,38 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-    
-    <div class="row">
-        <div class="col-sm-3">
-            <form action="" method="post">
-                Email:<br/>
-                <input type="email" name="email" require><br/>
-                Password:<br/>
-                <input type="password" name="password" require><br/>
-                <input class="btn btn-primary" type="submit" value="Login!">
-            </form>
-            <form action="Registration.php" method="post">
-                <br>
-                <input href="Registration.php" class="btn btn-primary" type="submit" value="Sign Up" >
-            </form>
+    <div>
+    <?php
+    if(isset($_POST['create'])){
+        $username   = $_POST['username'];
+        $password    = $_POST['password'];
+        
+        $sql = SELECT `username`, `pass` FROM `UserAccounts`;
+        $stmtinsert = $db->prepare($sql);
+        $result = $stmtinsert->execute();
+        if($result){
+            echo 'Successfully Logged in.';
+        }else{
+            echo 'Not Logged in ';
+        }
+    }
+    ?>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <form action="" method="post">
+                    Username:<br/>
+                    <input type="text" name="username" require><br/>
+                    Password:<br/>
+                    <input type="password" name="password" require><br/>
+                    <input class="btn btn-primary" type="submit" value="Login!">
+                </form>
+                <form action="Registration.php" method="post">
+                    <br>
+                    <input href="Registration.php" class="btn btn-primary" type="submit" value="Sign Up" >
+                </form>
+            </div>
         </div>
     </div>
 </body>
