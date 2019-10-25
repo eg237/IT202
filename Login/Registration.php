@@ -24,10 +24,9 @@ error_reporting(E_ALL);
             $email       = $_POST['email'];
             $password    = $_POST['password'];
             
-            $sql = "INSERT INTO `UserAccounts`(`id`, `firstname`, `lastname`, `email`, `pass`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])";
+            $sql = "INSERT INTO `UserAccounts`(`firstname`, `lastname`, `email`, `pass`) VALUES ('$firstname','$lastname','$email','$password')";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
-            $error = $db->error;
             // if($error && $error[0] !== '0000'){}
             if($result){
                 echo 'Successfully saved.';
