@@ -8,11 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-    <div>
-        <?php
-        if(isset($SESSION[]))
-        ?>
-    </div>
+    
     <div class="row">
         <div class="col-sm-3">
             <form action="" method="post">
