@@ -6,20 +6,21 @@ include_once('config.php');
 
 //mysql_select_db($db_name);
 
-// if(isset([$_POST['create'])){
-//     $uname = $_POST['username'];
-//     $passwo = $_POST['password'];
-//     $sql="SELECT * FROM `UserAccounts` WHERE username='" .$uname. "' AND pass='".$passwo."' LIMIT 1 ";
+if(isset([$_POST['create'])){
+    $uname = $_POST['username'];
+    $passwo = $_POST['password'];
+    $sql="SELECT * FROM `UserAccounts` WHERE username='" .$uname. "' AND pass='".$passwo."' LIMIT 1 ";
 
-//     $result=mysql_query($sql);
+    $stmtinsert = $db->prepare($sql);
+        $result = $stmtinsert->execute();
 
-//     if(mysql_num_rows($result)==1){
-//         echo "You have Successfully Logged in";
-//         exit();
-//     }else{
-//         echo "You have entered incorrect credentials";
-//     }
-// }
+    if(mysql_num_rows($result)==1){
+        echo "You have Successfully Logged in";
+        exit();
+    }else{
+        echo "You have entered incorrect credentials";
+    }
+}
 
 ?>
 <!DOCTYPE html>
