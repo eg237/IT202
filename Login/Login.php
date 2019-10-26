@@ -96,17 +96,17 @@ error_reporting(E_ALL);
             $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
-            if($result){
-                echo 'Successfully saved.';
-            }else{
-                echo 'There were errors while saving the data ';
-            }
-        }
+        //     if($result){
+        //         echo 'Successfully saved.';
+        //     }else{
+        //         echo 'There were errors while saving the data ';
+        //     }
+        // }
         ?>
     </div>
 
     <div>
-        <form action="Registration.php" method="post">
+        <form action="index.php" method="post">
             <div class="container">
                 
                 <div class="row">
