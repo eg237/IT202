@@ -96,13 +96,13 @@ error_reporting(E_ALL);
             $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
             $result = $db->query($sql);
 
-            if($result->num_rows > 0){
-                while ($row = $result->fetch_assoc()){
-                    echo "id:" .$row["id"]. "-Name:" . $rown["username"]. " " . $row["password"] . "<br>";
-                }else{
-                    echo "0 Results";
-                }
-            }
+            // if($result->num_rows > 0){
+            //     while ($row = $result->fetch_assoc()){
+            //         echo "id:" .$row["id"]. "-Name:" . $rown["username"]. " " . $row["password"] . "<br>";
+            //     }else{
+            //         echo "0 Results";
+            //     }
+            // }
             // $stmtinsert = $db->prepare($sql);
             // $result = $stmtinsert->execute();
         //     if($result){
