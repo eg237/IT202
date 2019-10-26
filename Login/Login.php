@@ -108,7 +108,7 @@ error_reporting(E_ALL);
     </div>
 
     <div>
-        <form action="index.php" method="post">
+        <form action="Login.php" method="post">
             <div class="container">
                 
                 <div class="row">
