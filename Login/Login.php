@@ -93,7 +93,7 @@ error_reporting(E_ALL);
             $username   = $_POST['username'];
             $password    = $_POST['password'];
             
-            $query = mysql_query("SELECT * FROM `UserAccounts`", $username, $password);
+            $query = mysql_query("SELECT * FROM `UserAccounts` username='$username' AND pass='$password'", $db);
             // $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
             // $stmtinsert = $db->prepare($sql);
             // $result = $stmtinsert->execute();
@@ -108,7 +108,7 @@ error_reporting(E_ALL);
     </div>
 
     <div>
-        <form action="Login.php" method="post">
+        <form action="index.php" method="post">
             <div class="container">
                 
                 <div class="row">
