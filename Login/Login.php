@@ -102,6 +102,7 @@ error_reporting(E_ALL);
             //  }else{
             //      echo 'There were errors while saving the data ';
             //  }
+            echo "$username";
          }
         ?>
     </div>
