@@ -94,7 +94,7 @@ error_reporting(E_ALL);
             $password    = $_POST['password'];
             
             $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
-            $result = $db->query($sql);
+            //$result = $db->query($sql);
 
             // if($result->num_rows > 0){
             //     while ($row = $result->fetch_assoc()){
