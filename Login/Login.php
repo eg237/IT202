@@ -3,6 +3,24 @@
 // ini_set('display_errors',1);
 // ini_set('display_startup_errors',1);
 // error_reporting(E_ALL);
+
+mysql_select_db($db_name);
+
+if(isset(['username'])){
+    $uname=$_POST['username'];
+    $passwo=$_POST['password'];
+    $sql="select * from eg237 where username='" .$uname. "' AND pass='".$passwo."' limit 1 ";
+
+    $result=mysql_query($sql);
+
+    if(mysql_num_rows($result)==1){
+        echo "You have Successfully Logged in";
+        exit();
+    }else{
+        echo "You have entered incorrect credentials";
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <form action="" method="post">
+                <form action="#" method="post">
                     Username:<br/>
                     <input type="text" name="username" require><br/>
                     Password:<br/>
