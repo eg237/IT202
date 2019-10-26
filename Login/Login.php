@@ -129,7 +129,7 @@ error_reporting(E_ALL);
                 </div>
             </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script type="text/javascript">
         $(function(){
@@ -140,6 +140,6 @@ error_reporting(E_ALL);
                 'type': 'success',
             })
         })
-    </script>
+    </script> -->
 </body>
 </html>
