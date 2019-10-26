@@ -22,12 +22,12 @@ error_reporting(E_ALL);
         
         $sql = SELECT `username`, `pass` FROM `UserAccounts`;
         $stmtinsert = $db->prepare($sql);
-        $result = $stmtinsert->execute();
-        if($result){
-            echo 'Successfully Logged in.';
-        }else{
-            echo 'Not Logged in ';
-        }
+        // $result = $stmtinsert->execute();
+        // if($result){
+        //     echo 'Successfully Logged in.';
+        // }else{
+        //     echo 'Not Logged in ';
+        // }
     }
     ?>
     </div>
