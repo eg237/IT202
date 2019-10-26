@@ -7,10 +7,10 @@ include_once('config.php');
 //mysql_select_db($db_name);
 
 if(isset([$_POST['create'])){
-    $uname = $_POST['username'];
-    $passwo = $_POST['password'];
-    $sql="SELECT * FROM `UserAccounts` WHERE username='" .$uname. "' AND pass='".$passwo."' LIMIT 1 ";
-
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    $sql="SELECT * FROM `UserAccounts` WHERE username='$uname' AND pass='$passwo' LIMIT 1 ";
     $stmtinsert = $db->prepare($sql);
     $result = $stmtinsert->execute();
 
