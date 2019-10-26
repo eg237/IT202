@@ -93,7 +93,7 @@ error_reporting(E_ALL);
             $username   = $_POST['username'];
             $password    = $_POST['password'];
             
-            $query = mysql_query("SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ", $db);
+            $query = mysqli_query("SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ", $db);
             // $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
             // $stmtinsert = $db->prepare($sql);
             // $result = $stmtinsert->execute();
