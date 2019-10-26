@@ -6,7 +6,7 @@ include_once("config.php"));
 
 mysql_select_db($db_name);
 
-if(isset(['username'])){
+if(isset([$_POST['username'])){
     $uname=$_POST['username'];
     $passwo=$_POST['password'];
     $sql="select * from eg237 where username='" .$uname. "' AND pass='".$passwo."' limit 1 ";
