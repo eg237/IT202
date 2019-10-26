@@ -12,13 +12,13 @@ if(isset([$_POST['create'])){
     $sql="SELECT * FROM `UserAccounts` WHERE username='" .$uname. "' AND pass='".$passwo."' LIMIT 1 ";
 
     $stmtinsert = $db->prepare($sql);
-        $result = $stmtinsert->execute();
+    $result = $stmtinsert->execute();
 
-    if(mysql_num_rows($result)==1){
-        echo "You have Successfully Logged in";
-        exit();
-    }else{
-        echo "You have entered incorrect credentials";
+    // if(mysql_num_rows($result)==1){
+    //     echo "You have Successfully Logged in";
+    //     exit();
+    // }else{
+    //     echo "You have entered incorrect credentials";
     }
 }
 
@@ -36,7 +36,7 @@ if(isset([$_POST['create'])){
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <form action="#" method="post">
+                <form action="Login.php" method="post">
                     Username:<br/>
                     <input type="text" name="username" require><br/>
                     Password:<br/>
