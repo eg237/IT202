@@ -111,15 +111,12 @@ error_reporting(E_ALL);
                 
                 <div class="row">
                     <div class="col-sm-3">
-                        <h1>Registration</h1>
-                        <p>Fill up the form with correct Values.</p>
+                        <h1>Login</h1>
+                        <p>Enter Your Credentials</p>
                         <hr class="mb-3">
 
                         <label for="username"><b>Username</b></label>
                         <input type="text" name="username" required>
-
-                        <label for="email"><b>Email Address</b></label>
-                        <input type="email" name="email" required>
 
                         <br>
                         <label for="password"><b>Password</b></label>
