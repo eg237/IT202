@@ -94,15 +94,7 @@ error_reporting(E_ALL);
             $password    = $_POST['password'];
             
             $query = mysqli_query("SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ", $db);
-            // $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
-            // $stmtinsert = $db->prepare($sql);
-            // $result = $stmtinsert->execute();
-        //     if($result){
-        //         echo 'Successfully saved.';
-            //  }else{
-            //      echo 'There were errors while saving the data ';
-            //  }
-            // echo "$username";
+            
             if(!$query){
                 die("invalid Query:" . mysql_error());
             }
