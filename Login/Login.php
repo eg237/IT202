@@ -9,7 +9,7 @@ mysql_select_db($db_name);
 if(isset([$_POST['create'])){
     $uname=$_POST['username'];
     $passwo=$_POST['password'];
-    $sql="select * from UserAccounts where username='" .$uname. "' AND pass='".$passwo."' limit 1 ";
+    $sql="SELECT * FROM `UserAccounts` WHERE username='" .$uname. "' AND pass='".$passwo."' LIMIT 1 ";
 
     $result=mysql_query($sql);
 
