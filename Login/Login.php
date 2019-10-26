@@ -14,23 +14,6 @@ error_reporting(E_ALL);
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-    <!-- <div>
-    <?php
-    // if(isset($_POST['create'])){
-    //     $username   = $_POST['username'];
-    //     $password    = $_POST['password'];
-        
-    //     $sql = SELECT `username`, `pass` FROM `UserAccounts`;
-    //     $stmtinsert = $db->prepare($sql);
-    //     $result = $stmtinsert->execute();
-    //     if($result){
-    //         echo 'Successfully Logged in.';
-    //     }else{
-    //         echo 'Not Logged in ';
-    //     }
-    // }
-    ?>
-    </div> -->
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
