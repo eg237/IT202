@@ -10,7 +10,7 @@ if(isset([$_POST['create'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    $sql="SELECT `username`, `pass` FROM `UserAccounts` WHERE 1";
+    $sql="SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
     $stmtinsert = $db->prepare($sql);
     $result = $stmtinsert->execute();
 
