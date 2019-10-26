@@ -93,15 +93,16 @@ error_reporting(E_ALL);
             $username   = $_POST['username'];
             $password    = $_POST['password'];
             
-            $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
-            $stmtinsert = $db->prepare($sql);
-            $result = $stmtinsert->execute();
-            if($result){
-                echo 'Successfully saved.';
-            }else{
-                echo 'There were errors while saving the data ';
-            }
-        }
+            $query = mysql_query("SELECT * FROM `UserAccounts`", $db);
+            // $sql = "SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
+            // $stmtinsert = $db->prepare($sql);
+            // $result = $stmtinsert->execute();
+        //     if($result){
+        //         echo 'Successfully saved.';
+            //  }else{
+            //      echo 'There were errors while saving the data ';
+            //  }
+         }
         ?>
     </div>
 
