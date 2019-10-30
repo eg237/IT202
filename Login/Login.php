@@ -32,6 +32,7 @@ error_reporting(E_ALL);
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
+                <h1>Login</h1>
                 <form action="Login.php" method="post">
                     Username:<br/>
                     <input type="text" name="username" require><br/>
