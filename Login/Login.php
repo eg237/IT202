@@ -93,7 +93,7 @@ error_reporting(E_ALL);
             $username   = $_POST['username'];
             $password    = $_POST['password'];
             
-            $query = mysqli_query("SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ", $db);
+            $query = mysqli_query("SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password'");
             
             if(!$query){
                 die("invalid Query:" . mysql_error());
