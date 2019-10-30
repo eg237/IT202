@@ -13,7 +13,7 @@ if(isset([$_POST['create'])){
         $password = $_POST['password'];
     }
     
-    $query="SELECT username, pass FROM `UserAccounts` WHERE username=? AND pass=? LIMIT 1";
+    //$query="SELECT username, pass FROM `UserAccounts` WHERE username=? AND pass=? LIMIT 1";
     $stmt = $db->prepare($query);
     // $stmt->bind_param("ss",$username,$password);
     // $stmt->execute();
