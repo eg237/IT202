@@ -4,13 +4,13 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-mysql_select_db($db_name);
-
 if(isset([$_POST['create'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    $sql="SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
+    $sql="SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password'";
+    $result = mysqli_query($db,$sql);
+    
     if(mysql_num_rows($result)==1){
          echo "You have Successfully Logged in";
         exit();
