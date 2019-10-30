@@ -24,6 +24,7 @@ if(isset([$_POST['create'])){
         $_SESSION['UserAccount_username'] = $username;
     }else{
         $error = "Username or PAssword is invalid";
+        echo $error;
     }
 //     $result = mysqli_query($db,$sql);
 
