@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 //     $username = $_POST['username'];
 //     $password = $_POST['password'];
     
-//     $sql="SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password'";
+//     $sql="SELECT * FROM `UserAccounts`";
 //     $result = mysqli_query($db,$sql);
 
 //     if(mysql_num_rows($result)==1){
