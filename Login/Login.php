@@ -10,15 +10,15 @@ if(isset([$_POST['create'])){
     
     $sql="SELECT * FROM `UserAccounts` WHERE username='$username' AND pass='$password'";
     $result = mysqli_query($db,$sql);
-    
-    if(mysql_num_rows($result)==1){
-         echo "You have Successfully Logged in";
-        exit();
-    }else{
-        echo "You have entered incorrect credentials";
-    }
-} 
-?>
+
+//     if(mysql_num_rows($result)==1){
+//          echo "You have Successfully Logged in";
+//         exit();
+//     }else{
+//         echo "You have entered incorrect credentials";
+//     }
+// } 
+// ?>
  <!DOCTYPE html>
 <html lang="en">
 <head>
