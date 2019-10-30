@@ -50,26 +50,3 @@ error_reporting(E_ALL);
     </div>
 </body>
 </html> 
-
-<!-- <header>
-    <nav>
-        <a href="#"></a>
-        <ul>
-            <li><a href="index.php">Test</a></li>
-            <li><a href="#">Ports</a></li>
-            <li><a href="#">Spagetti</a></li>
-            <li><a href="#">Rigattoni</a></li>
-        </ul>
-    </nav>
-    <div>
-        <form action="login.inc.php" method="post">  
-            <input type="text" name="mailuid" placeholder="Username/Email">
-            <input type="password" name="pwd" placeholder="Password">
-            <button type="submit" name="login-submit">Login</button>
-        </form>
-        <a href="Registration.php">SignUp</a>
-        <form action="#" method="post">
-            
-        </form>
-    </div>
-</header> -->
