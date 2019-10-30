@@ -5,14 +5,14 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
 $error = '';
-if(isset([$_POST['create'])){
-    if(empty($_POST['username'] || $_POST['password'])){
-        $error = "Username or Password is invalid";
-        echo $error;
-    }else{
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-    }
+// if(isset([$_POST['create'])){
+//     if(empty($_POST['username'] || $_POST['password'])){
+//         $error = "Username or Password is invalid";
+//         echo $error;
+//     }else{
+//         $username = $_POST['username'];
+//         $password = $_POST['password'];
+//     }
     
     //$query="SELECT username, pass FROM `UserAccounts` WHERE username=? AND pass=? LIMIT 1";
     //$stmt = $db->prepare($query);
