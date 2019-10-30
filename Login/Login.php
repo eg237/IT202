@@ -20,9 +20,11 @@ if(isset([$_POST['create'])){
     $stmt->bind_result($username, $password);
     $stmt->store_result();
 
-    // if($stmt->fetch()){
-    //     $_SESSION['UserAccount_username'] = $username;
-    // }
+    if($stmt->fetch()){
+        $_SESSION['UserAccount_username'] = $username;
+    }else{
+        $error = "Username or PAssword is invalid";
+    }
 //     $result = mysqli_query($db,$sql);
 
 //     if(mysql_num_rows($result)==1){
