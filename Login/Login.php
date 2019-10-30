@@ -37,7 +37,8 @@ error_reporting(E_ALL);
                     Username:<br/>
                     <input type="text" name="username" require><br/>
                     Password:<br/>
-                    <input type="password" name="password" require><br>
+                    <input type="password" name="password" require><br/>
+                    <br>
                     <input class="btn btn-primary" type="submit" name ="create" value="Login!">
                 </form>
                 <form action="Registration.php" method="post">
