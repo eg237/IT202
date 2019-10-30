@@ -4,8 +4,6 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-mysql_select_db($db_name);
-
 if(isset([$_POST['create'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
