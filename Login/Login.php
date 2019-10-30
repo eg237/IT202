@@ -8,6 +8,7 @@ $error = '';
 if(isset([$_POST['create'])){
     if(empty($_POST['username'] || $_POST['password'])){
         $error = "Username or Password is invalid";
+        echo $error;
     }else{
         $username = $_POST['username'];
         $password = $_POST['password'];
