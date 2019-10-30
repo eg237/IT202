@@ -4,38 +4,19 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-$error = '';
+mysql_select_db($db_name);
+
 if(isset([$_POST['create'])){
-    if(empty($_POST['username'] || $_POST['password'])){
-        $error = "Username or Password is invalid";
-        echo $error;
-    }else{
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-    }
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     
-    //$query="SELECT username, pass FROM `UserAccounts` WHERE username=? AND pass=? LIMIT 1";
-    //$stmt = $db->prepare($query);
-    // $stmt->bind_param("ss",$username,$password);
-    // $stmt->execute();
-    // $stmt->bind_result($username, $password);
-    // $stmt->store_result();
-
-    // if($stmt->fetch()){
-    //     $_SESSION['UserAccount_username'] = $username;
+    $sql="SELECT username, pass FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
+    // if(mysql_num_rows($result)==1){
+    //      echo "You have Successfully Logged in";
+    //     exit();
     // }else{
-    //     $error = "Username or PAssword is invalid";
-    //     echo $error;
+    //     echo "You have entered incorrect credentials";
     // }
-//     $result = mysqli_query($db,$sql);
-
-//     if(mysql_num_rows($result)==1){
-//          echo "You have Successfully Logged in";
-//         exit();
-//     }else{
-//         echo "You have entered incorrect credentials";
-        // }
-//     }
 } 
 ?>
  <!DOCTYPE html>
@@ -51,13 +32,11 @@ if(isset([$_POST['create'])){
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <h1>Login</h1>
                 <form action="Login.php" method="post">
                     Username:<br/>
                     <input type="text" name="username" require><br/>
                     Password:<br/>
                     <input type="password" name="password" require><br/>
-                    <br>
                     <input class="btn btn-primary" type="submit" name ="create" value="Login!">
                 </form>
                 <form action="Registration.php" method="post">
@@ -69,3 +48,26 @@ if(isset([$_POST['create'])){
     </div>
 </body>
 </html> 
+
+<!-- <header>
+    <nav>
+        <a href="#"></a>
+        <ul>
+            <li><a href="index.php">Test</a></li>
+            <li><a href="#">Ports</a></li>
+            <li><a href="#">Spagetti</a></li>
+            <li><a href="#">Rigattoni</a></li>
+        </ul>
+    </nav>
+    <div>
+        <form action="login.inc.php" method="post">  
+            <input type="text" name="mailuid" placeholder="Username/Email">
+            <input type="password" name="pwd" placeholder="Password">
+            <button type="submit" name="login-submit">Login</button>
+        </form>
+        <a href="Registration.php">SignUp</a>
+        <form action="#" method="post">
+            
+        </form>
+    </div>
+</header> -->
