@@ -15,10 +15,10 @@ if(isset([$_POST['create'])){
     
     $query="SELECT username, pass FROM `UserAccounts` WHERE username=? AND pass=? LIMIT 1";
     $stmt = $db->prepare($query);
-    $stmt->bind_param("ss",$username,$password);
-    $stmt->execute();
-    $stmt->bind_result($username, $password);
-    $stmt->store_result();
+    // $stmt->bind_param("ss",$username,$password);
+    // $stmt->execute();
+    // $stmt->bind_result($username, $password);
+    // $stmt->store_result();
 
     if($stmt->fetch()){
         $_SESSION['UserAccount_username'] = $username;
