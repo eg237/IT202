@@ -4,11 +4,25 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-// if(isset([$_POST['create'])){
-//     $username = $_POST['username'];
-//     $password = $_POST['password'];
+$error = '';
+if(isset([$_POST['create'])){
+    if(empty($_POST['username'] || $_POST['password'])){
+        $error = "Username or Password is invalid";
+    }else{
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+    }
     
-//     $sql="SELECT * FROM `UserAccounts`";
+    $query="SELECT username, pass FROM `UserAccounts` WHERE username=? AND pass=? LIMIT 1";
+    $stmt = $db->prepare($query);
+    $stmt->bind_param("ss",$username,$password);
+    $stmt->execute();
+    $stmt->bind_result($username, $password);
+    $stmt->store_result();
+
+    // if($stmt->fetch()){
+    //     $_SESSION['UserAccount_username'] = $username;
+    // }
 //     $result = mysqli_query($db,$sql);
 
 //     if(mysql_num_rows($result)==1){
@@ -16,8 +30,9 @@ error_reporting(E_ALL);
 //         exit();
 //     }else{
 //         echo "You have entered incorrect credentials";
-//     }
-// } 
+        // }
+    }
+} 
 ?>
  <!DOCTYPE html>
 <html lang="en">
