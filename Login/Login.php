@@ -1,21 +1,5 @@
 <?php
 include_once('config.php');
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(E_ALL);
-
-if(isset([$_POST['create'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    
-    $sql="SELECT username, pass FROM `UserAccounts` WHERE username='$username' AND pass='$password' LIMIT 1 ";
-    // if(mysql_num_rows($result)==1){
-    //      echo "You have Successfully Logged in";
-    //     exit();
-    // }else{
-    //     echo "You have entered incorrect credentials";
-    // }
-} 
 ?>
  <!DOCTYPE html>
 <html lang="en">
