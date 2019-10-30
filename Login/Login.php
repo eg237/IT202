@@ -14,11 +14,13 @@ include_once('config.php');
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
+                <h1>Login</h1>
                 <form action="Login.php" method="post">
                     Username:<br/>
                     <input type="text" name="username" require><br/>
                     Password:<br/>
                     <input type="password" name="password" require><br/>
+                    <br>
                     <input class="btn btn-primary" type="submit" name ="create" value="Login!">
                 </form>
                 <form action="Registration.php" method="post">
