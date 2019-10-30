@@ -21,12 +21,12 @@ $error = '';
     // $stmt->bind_result($username, $password);
     // $stmt->store_result();
 
-    if($stmt->fetch()){
-        $_SESSION['UserAccount_username'] = $username;
-    }else{
-        $error = "Username or PAssword is invalid";
-        echo $error;
-    }
+    // if($stmt->fetch()){
+    //     $_SESSION['UserAccount_username'] = $username;
+    // }else{
+    //     $error = "Username or PAssword is invalid";
+    //     echo $error;
+    // }
 //     $result = mysqli_query($db,$sql);
 
 //     if(mysql_num_rows($result)==1){
@@ -35,8 +35,8 @@ $error = '';
 //     }else{
 //         echo "You have entered incorrect credentials";
         // }
-    }
-} 
+//     }
+// } 
 ?>
  <!DOCTYPE html>
 <html lang="en">
