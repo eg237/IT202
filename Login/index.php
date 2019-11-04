@@ -2,8 +2,8 @@
 include_once('config.php');
 
  if(isset($_POST['create'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['user'];
+    $password = $_POST['pass'];
 
     if($username == $password)){
         echo 'Please Fill in the blanks'
