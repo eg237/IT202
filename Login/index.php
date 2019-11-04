@@ -10,6 +10,11 @@ $password = $_POST['pass'];
     $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
     $result=mysql_query($sql);
     echo 'All';
+    if(empty($_POST['username']))
+{
+    echo "UserName/Password is empty!";
+    return false;
+}
 
  }
 
