@@ -13,7 +13,7 @@ $password = $_POST['pass'];
     if ($row['username'] == $username && $row['pass'] == $password){
         echo "You are logged in";
     }else{
-        echo 'You Are Logged in';
+        echo 'Incorrect Info';
     }
 
  }
