@@ -2,10 +2,10 @@
 include_once('config.php');
 
  if(isset($_POST['create'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    // $username = $_POST['username'];
+    // $password = $_POST['password'];
 
-    if(empty($username)|| empty($password)){
+    if(empty($username) || empty($password)){
         echo 'Please Fill in the blanks'
     }
     // else{
