@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-3">
                 <h1>Login</h1>
-                <form action="#" method="post">
+                <form action="index.php" method="post">
                     <label>Username:</label><br/>
                     <input type="text" name="username" id = "username" require><br/>
                     <label>Password:</label><br/>

@@ -42,28 +42,31 @@
 //  mysqli_close($conn); // Closing connection
 //  }
 // }
+// if(isset($_POST['create'])){
+
+//     $username = mysqli_real_escape_string($db,$_POST['username']);
+//     $password = mysqli_real_escape_string($db,$_POST['password']);
+
+//     if ($username != "" && $password != ""){
+
+//         $sql_query = "select * from UserAccounts where username='".$username."' and password='".$password."'";
+//         $result = mysqli_query($db,$sql_query);
+//         $row = mysqli_fetch_array($result);
+
+//         $count = $row['UserAccounts'];
+
+//         if($count > 0){
+//             $_SESSION['username'] = $username;
+//             header('Location: home.php');
+//         }else{
+//             echo "Invalid username and password";
+//         }
+
+//     }
+
+// }
 if(isset($_POST['create'])){
-
-    $username = mysqli_real_escape_string($db,$_POST['username']);
-    $password = mysqli_real_escape_string($db,$_POST['password']);
-
-    if ($username != "" && $password != ""){
-
-        $sql_query = "select * from UserAccounts where username='".$username."' and password='".$password."'";
-        $result = mysqli_query($db,$sql_query);
-        $row = mysqli_fetch_array($result);
-
-        $count = $row['UserAccounts'];
-
-        if($count > 0){
-            $_SESSION['username'] = $username;
-            header('Location: home.php');
-        }else{
-            echo "Invalid username and password";
-        }
-
-    }
-
+    echo 'Working';
 }
 
 ?>
