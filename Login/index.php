@@ -1,5 +1,16 @@
 <?php
-    include_once('config.php')
+$servername="sql2.njit.edu";
+$db_user = "eg237";
+$db_pass = "LL9acXZx";
+$db_name = "eg237";
+
+$db=mysqli_connect($servername, $db_user, $db_pass, $db_name);
+
+if($db){
+    echo "Connected";
+}else{
+    echo "Not Connected";
+}
     $username = $_POST['username']
     $password = $_POST['pass']
 
