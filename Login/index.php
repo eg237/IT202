@@ -6,7 +6,7 @@ include_once('config.php');
     // $password = $_POST['pass'];
 
     // if($username == $password)){
-        echo 'Please Fill in the blanks';
+        echo '$_POST["user"]';
     // }
     // else{
     //     $query = "select * from 'UserAccounts' where username='$username' ";
