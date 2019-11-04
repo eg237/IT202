@@ -7,22 +7,33 @@ $password = $_POST['pass'];
 
  if(isset($_POST['create'])){
 
-    $sql="SELECT username, pass FROM 'UserAccounts' ";
-    $result=$db->query($sql);
-    // if ($row['username'] == $username && $row['pass'] == $password){
-    //     echo "You are logged in";
-    // }else{
-    //     echo 'Incorrect Info';
-    // }
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo 'Good';
+    $sql="SELECT * FROM 'UserAccounts' ";
+    $result = mysqli_query($db,$sql);
+    if(mysqli_num_rows($result) > 0){
+        echo "<table>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
         }
-    } else {
-        echo "0 results";
+        echo "</table>";
+        // Free result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
     }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . 
 
- }
+}
 
 ?>
