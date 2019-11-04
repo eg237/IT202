@@ -1,9 +1,13 @@
 <?php
 include_once('config.php');
 
+
+$username = $_POST['user'];
+$password = $_POST['pass'];
+
  if(isset($_POST['create'])){
-     $username = $_POST['user'];
-     $password = $_POST['pass'];
+    //  $username = $_POST['user'];
+    //  $password = $_POST['pass'];
 
      if($username == $password){
         echo $username;
