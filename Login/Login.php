@@ -17,9 +17,9 @@ include_once('config.php');
                 <h1>Login</h1>
                 <form action="index.php" method="post">
                     <label>Username:</label><br/>
-                    <input type="text" name="username" require><br/>
+                    <input type="text" name="username" id = "username" require><br/>
                     <label>Password:</label><br/>
-                    <input type="password" name="password" require><br/>
+                    <input type="password" name="password" id = "password" require><br/>
                     <br>
                     <input class="btn btn-primary" type="submit" name ="create" value="Login!">
                 </form>
