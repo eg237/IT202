@@ -4,7 +4,8 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-// if(isset($_POST['create'])){
+ if(isset($_POST['create'])){
+     echo 'Test'
 //     $username = $_POST['username'];
 //     $password = $_POST['password'];
 
@@ -15,6 +16,6 @@ error_reporting(E_ALL);
 //     //     $query = "select * from 'UserAccounts' where username='$username' ";
 //     //     $result = mysqli_query($db,$query);
 //     // }
-// }
+ }
 
 ?>
