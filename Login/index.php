@@ -1,19 +1,19 @@
 <?php
     include_once('config.php')
-    $username = $_POST['username']
-    $password = $_POST['pass']
+//     $username = $_POST['username']
+//     $password = $_POST['pass']
 
-    // $username = stripcslashes($username);
-    // $password = stripcslashes($password);
-$result = mysqli_query("SELECT * FROM `UserAccounts` WHERE username = '$username' and pass = '$password'") 
-    or die("Failed to query Database " . mysqli_error());
-$row = mysqli_fetch_array($result);
-if ($row['username'] == $username && $row['pass'] == $password) {
-    echo "Login Successful Welcome " .$row['username'];
-}
-else{
-    echo "Failed to Login";
-}
+//     // $username = stripcslashes($username);
+//     // $password = stripcslashes($password);
+// $result = mysqli_query("SELECT * FROM `UserAccounts` WHERE username = '$username' and pass = '$password'") 
+//     or die("Failed to query Database " . mysqli_error());
+// $row = mysqli_fetch_array($result);
+// if ($row['username'] == $username && $row['pass'] == $password) {
+//     echo "Login Successful Welcome " .$row['username'];
+// }
+// else{
+//     echo "Failed to Login";
+// }
 // $error=''; //Variable to Store error message;
 // if(isset($_POST['create'])){
 //  if(empty($_POST['username']) || empty($_POST['password'])){
@@ -42,5 +42,28 @@ else{
 //  mysqli_close($conn); // Closing connection
 //  }
 // }
+if(isset($_POST['create'])){
+
+    $username = mysqli_real_escape_string($db,$_POST['username']);
+    $password = mysqli_real_escape_string($db,$_POST['password']);
+
+    if ($username != "" && $password != ""){
+
+        $sql_query = "select * from UserAccounts where username='".$username."' and password='".$password."'";
+        $result = mysqli_query($db,$sql_query);
+        $row = mysqli_fetch_array($result);
+
+        $count = $row['UserAccounts'];
+
+        if($count > 0){
+            $_SESSION['username'] = $uname;
+            header('Location: home.php');
+        }else{
+            echo "Invalid username and password";
+        }
+
+    }
+
+}
 
 ?>
