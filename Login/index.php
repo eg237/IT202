@@ -11,6 +11,9 @@ $password = $_POST['pass'];
     $result=mysqli_query($sql);
     $row = mysqli_fetch_array($result);
     echo $row;
+    if ($row['username'] == $username && $row['pass'] == $password){
+        echo "You are logged in";
+    }
 
  }
 
