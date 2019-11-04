@@ -8,13 +8,18 @@ $password = $_POST['pass'];
  if(isset($_POST['create'])){
 
     $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
-    $result=mysql_query($sql);
-    echo 'All';
-    if(empty($_POST['username']) || empty($_POST['pass']))
-{
-    echo "UserName/Password is empty!";
-    return false;
-}
+    $result=mysqli_query($sql);
+
+    if($row = mysqli_fetch_assoc($result)){
+        $db_password = $row['pass']
+
+        if(md5($password)== $db_password){
+            echo 'You are In';
+        }
+    }
+    else{
+        echo 'Please check your Query';
+    }
 
  }
 
