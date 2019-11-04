@@ -9,7 +9,6 @@ $password = $_POST['pass'];
 
     $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
     $result=$db->query($sql);
-    $row = $result->fetch_assoc();
     // if ($row['username'] == $username && $row['pass'] == $password){
     //     echo "You are logged in";
     // }else{
