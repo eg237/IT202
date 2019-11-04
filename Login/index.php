@@ -5,7 +5,7 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
  if(isset($_POST['create'])){
-     echo 'Test'
+     echo 'Test';
 //     $username = $_POST['username'];
 //     $password = $_POST['password'];
 
