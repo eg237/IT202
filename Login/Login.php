@@ -12,13 +12,13 @@
         <div class="row">
             <div class="col-sm-3">
                 <h1>Login</h1>
-                <form action="index.php" method="post">
+                <form action="#" method="post">
                     <label>Username:</label><br/>
                     <input type="text" name="username" id = "username" require><br/>
                     <label>Password:</label><br/>
                     <input type="password" name="password" id = "password" require><br/>
                     <br>
-                    <input class="btn btn-primary" type="submit" name ="create" value="Login!">
+                    <input class="btn btn-primary" type="submit" name ="create" id ="create" value="Login!">
                 </form>
                 <form action="Registration.php" method="post">
                     <br>

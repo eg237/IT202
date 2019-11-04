@@ -1,16 +1,5 @@
 <?php
-$servername="sql2.njit.edu";
-$db_user = "eg237";
-$db_pass = "LL9acXZx";
-$db_name = "eg237";
-
-$db=mysqli_connect($servername, $db_user, $db_pass, $db_name);
-
-if($db){
-    echo "Connected";
-}else{
-    echo "Not Connected";
-}
+    include_once('config.php')
     $username = $_POST['username']
     $password = $_POST['pass']
 
@@ -21,7 +10,8 @@ $result = mysqli_query("SELECT * FROM `UserAccounts` WHERE username = '$username
 $row = mysqli_fetch_array($result);
 if ($row['username'] == $username && $row['pass'] == $password) {
     echo "Login Successful Welcome " .$row['username'];
-}else{
+}
+else{
     echo "Failed to Login";
 }
 // $error=''; //Variable to Store error message;
