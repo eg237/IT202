@@ -5,13 +5,14 @@ include_once('config.php');
      $username = $_POST['user'];
      $password = $_POST['pass'];
 
-    // if($username == $password)){
+     if($username == $password)){
         echo $username;
         echo $password;
-    // }
-    // else{
+     }
+     else{
     //     $query = "select * from 'UserAccounts' where username='$username' ";
     //     $result = mysqli_query($db,$query);
+        echo 'Not the Same';
     // }
  }
 
