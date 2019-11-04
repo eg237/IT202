@@ -56,7 +56,7 @@ if(isset($_POST['create'])){
         $count = $row['UserAccounts'];
 
         if($count > 0){
-            $_SESSION['username'] = $uname;
+            $_SESSION['username'] = $username;
             header('Location: home.php');
         }else{
             echo "Invalid username and password";
