@@ -5,7 +5,7 @@
 
     // $username = stripcslashes($username);
     // $password = stripcslashes($password);
-$result = "SELECT * FROM `UserAccounts` WHERE username = '$username' and pass = '$password'" 
+$result = "SELECT * FROM `UserAccounts` WHERE username = '$username' and pass = '$password' LIMIT 1"; 
     or die("Failed to query Database " . mysqli_error());
 $row = mysqli_fetch_array($result);
 if ($row['username'] == $username && $row['pass'] == $password) {
