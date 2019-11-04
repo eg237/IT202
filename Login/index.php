@@ -8,7 +8,7 @@
 $result = mysqli_query("SELECT * FROM `UserAccounts` WHERE username = '$username' and pass = '$password'") 
     or die("Failed to query Database " . mysqli_error());
 $row = mysqli_fetch_array($result);
-if ($row['username'] == $username && $row['pass'] == $password) {
+if ($row['username'] == $username && $row['password'] == $password) {
     echo "Login Successful Welcome " .$row['username'];
 }else{
     echo "Failed to Login";
