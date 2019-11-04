@@ -5,7 +5,7 @@ include_once('config.php');
      $username = $_POST['user'];
      $password = $_POST['pass'];
 
-     if($username == $password)){
+     if($username == $password){
         echo $username;
         echo $password;
      }
