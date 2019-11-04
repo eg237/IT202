@@ -9,7 +9,8 @@ $password = $_POST['pass'];
 
     $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
     $result=mysqli_query($sql);
-    echo $result;
+    $row = mysqli_fetch_array($result);
+    echo $row;
 
  }
 
