@@ -17,7 +17,7 @@ $password = $_POST['pass'];
     //     $query = "select * from 'UserAccounts' where username='$username' ";
     //     $result = mysqli_query($db,$query);
         echo 'Not the Same';
-    // }
+     }
  }
 
 ?>
