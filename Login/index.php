@@ -35,5 +35,6 @@ $password = $_POST['pass'];
     echo "ERROR: Could not able to execute $sql. " . 
 
 }
+}
 
 ?>
