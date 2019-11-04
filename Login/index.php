@@ -10,10 +10,6 @@ $password = $_POST['pass'];
     $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
     $result=$db->query($sql);
     echo 'You are On'
-    if($result->num_rows > 0){
-        echo 'Good';
-    }
-
  }
 
 ?>
