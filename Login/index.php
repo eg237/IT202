@@ -9,9 +9,8 @@ $password = $_POST['pass'];
     //  $username = $_POST['user'];
     //  $password = $_POST['pass'];
 
-     if($username == $password){
-        echo $username;
-        echo $password;
+     if(empty($username) || empty($password)){
+        echo 'Fill in the Blank'
      }
      else{
     //     $query = "select * from 'UserAccounts' where username='$username' ";
