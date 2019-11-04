@@ -7,7 +7,7 @@ $password = $_POST['pass'];
 
  if(isset($_POST['create'])){
 
-    $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
+    $sql="SELECT username, pass FROM 'UserAccounts' ";
     $result=$db->query($sql);
     // if ($row['username'] == $username && $row['pass'] == $password){
     //     echo "You are logged in";
