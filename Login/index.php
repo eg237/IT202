@@ -29,9 +29,9 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
     $result = $stmt->fetch(sqli::FETCH_ASSOC);
     if($results && count($results) > 0){
         //$hash = password_hash($pass, PASSWORD_BCRYPT);
-        if(password_verify($pass, $results['password'])){
-            echo "Welcome, " . $results["username"];
-            echo "[" . $results["username"] . "]";
+        if(password_verify($pass, $results['pass'])){
+            echo "Welcome, " . $results["user"];
+            echo "[" . $results["user"] . "]";
             //header("Location: samplelandingpage.html");
         }
         else{
