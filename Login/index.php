@@ -2,23 +2,6 @@
 include_once('config.php');
 session_start();
 
-
-// $username = $_POST['user'];
-// $password = $_POST['pass'];
-
-//  if(isset($_POST['create'])){
-
-//     $sql="SELECT * FROM 'UserAccounts' WHERE username='$username' and pass='$password'";
-//     $result=mysqli_query($sql);
-//     $row = mysqli_fetch_array($result);
-//     if ($row['username'] == $username && $row['pass'] == $password){
-//         echo "You are logged in";
-//     }else{
-//         echo 'Incorrect Info';
-//     }
-
-//  }
-
 // if(isset($_POST['user']) && isset($_POST['pass'])){
 //     $username = $_POST['user'];
 //     $password = $_POST['pass'];
@@ -45,7 +28,6 @@ session_start();
 // }
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form 
     
     $myusername = mysqli_real_escape_string($db,$_POST['username']);
     $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
@@ -53,12 +35,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT id FROM `UserAccounts` WHERE username = '$myusername' and pass = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
+    // $active = $row['active'];
     
     $count = mysqli_num_rows($result);
     
-    // If result matched $myusername and $mypassword, table row must be 1 row
-      
+     
     if($count == 1) {
        session_register("myusername");
        $_SESSION['login_user'] = $myusername;
