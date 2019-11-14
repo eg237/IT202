@@ -13,6 +13,13 @@ error_reporting(E_ALL);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Registration | PHP</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script>
+        function checkPasswords(form){
+	        let isOk = form.password.value == form.confirm.value;
+	        if(!isOk){ alert("Passwords don't match");}
+	        return isOk;
+}
+    </script>
 </head>
 <body>
     <div>
@@ -55,6 +62,10 @@ error_reporting(E_ALL);
                         <label for="password"><b>Password</b></label>
                         <br>
                         <input type="password" name="password" required>
+
+                        <label for="confirm"><b>Confirm Password</b></label>
+                        <br>
+                        <input type="password" name="confirm" required>
 
                         <hr class="mb-3">
                         <input class="btn btn-primary" type="submit" name="create" value="Sign Up" required>
