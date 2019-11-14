@@ -29,7 +29,12 @@ error_reporting(E_ALL);
             $username   = $_POST['username'];
             $email       = $_POST['email'];
             $password    = $_POST['password'];
-            
+            $confirm     = $_POST['confirm'];
+
+            if($password != $confirm){
+				echo "Passwords don't match";
+				exit();
+		}
             $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$password')";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
