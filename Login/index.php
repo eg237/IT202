@@ -32,7 +32,7 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
         if(password_verify($pass, $results['pass'])){
             echo "Welcome, " . $results["user"];
             echo "[" . $results["user"] . "]";
-            //header("Location: samplelandingpage.html");
+            header("Location: LandingPage.html");
         }
         else{
             echo "Invalid password";
