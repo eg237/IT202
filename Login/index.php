@@ -11,7 +11,7 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
     $stmt = $db->prepare($query);
     $stmt->execute(array(":user" =>$username));
     $result = $stmt->fetch(sqli::FETCH_ASSOC);
-    if($results && count($results) > 0){
+    if($results  > 0){
         // $hash = password_hash($pass, PASSWORD_BCRYPT);
          if(password_verify($password, $results['pass'])){
             echo "Welcome, " . $results["user"];
