@@ -32,7 +32,7 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
         if(password_verify($pass, $results['pass'])){
             echo "Welcome, " . $results["user"];
             echo "[" . $results["user"] . "]";
-            header("Location: LandingPage.html");
+            header("Location: https://web.njit.edu/~eg237/IT202/Login/LandingPage.html");
         }
         else{
             echo "Invalid password";
