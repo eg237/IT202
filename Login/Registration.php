@@ -32,7 +32,7 @@ error_reporting(E_ALL);
             $confirm     = $_POST['confirm'];
 
             if($password != $confirm){
-				return "Passwords don't match";
+				echo "Passwords don't match";
 				exit();
 		}
             $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$password')";
