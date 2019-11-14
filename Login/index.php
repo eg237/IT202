@@ -28,8 +28,8 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
     $stmt->execute(array(":user" =>$username));
     $result = $stmt->fetch(sqli::FETCH_ASSOC);
     if($results && count($results) > 0){
-        //$hash = password_hash($pass, PASSWORD_BCRYPT);
-        if(password_verify($password, $results['pass'])){
+        // $hash = password_hash($pass, PASSWORD_BCRYPT);
+        // if(password_verify($password, $results['pass'])){
             echo "Welcome, " . $results["user"];
             echo "[" . $results["user"] . "]";
             header("Location: https://web.njit.edu/~eg237/IT202/Login/LandingPage.html");
