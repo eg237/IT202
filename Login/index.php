@@ -23,7 +23,7 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
     $password = $_POST['pass'];
 
     $query="select username , pass from `UserAccounts`";
-    $query += "where username = :user LIMIT 1";
+    $query += "where $username = :user LIMIT 1";
     $stmt = $db->prepare($query);
     $stmt->execute(array(":user" =>$username));
     $result = $stmt->fetch(sqli::FETCH_ASSOC);
