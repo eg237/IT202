@@ -13,14 +13,14 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
     $result = $stmt->fetch(sqli::FETCH_ASSOC);
     if($results  > 0){
         // $hash = password_hash($pass, PASSWORD_BCRYPT);
-         if(password_verify($password, $results['pass'])){
+         //if(password_verify($password, $results['pass'])){
             echo "Welcome, " . $results["user"];
             echo "[" . $results["user"] . "]";
             header("Location: LandingPage.html");
-        }
-        else{
-            echo "Invalid password";
-        }
+        // }
+        // else{
+        //     echo "Invalid password";
+        // }
     }
     else{
             echo "Invalid username";
