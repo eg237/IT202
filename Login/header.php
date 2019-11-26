@@ -29,16 +29,10 @@ require 'config.php'
             <form action="Login.php" method="post">
                 <button type="submit" name="login-submit">Login</button>
             </from>
+            <a href = "Registratio.php">Signup</a>
         </div>
-        
         <div class="header-login">
-            <form action="Registration.php" method="post">
-                <button type="submit" name="logout-submit">Signup</button>
-            </form>
-        </div> 
-        
-        <div class="header-login">
-            <form action="Registration.php" method="post">
+            <form action="logout.inc.php" method="post">
                 <button type="submit" name="logout-submit">Logout</button>
             </form>
         </div>
