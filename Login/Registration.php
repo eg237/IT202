@@ -34,8 +34,8 @@ error_reporting(E_ALL);
 				echo "Passwords don't match";
 				exit();
 		}else{
-            $hash = password_hash($password, algo:PASSWORD_BCRYPT);
-            $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$password')";
+            $hash = password_hash($password,PASSWORD_BCRYPT);
+            $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$hash')";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
             if($result){
