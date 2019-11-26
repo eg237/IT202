@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require 'config.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +14,7 @@ session_start();
     <body>
 
         <header>
-            <nav>
+            <nav class = "nav-header-main">
                 <a href="#"></a>
                 <ul>
                     <li><a href="index.php">Home</li>
