@@ -22,7 +22,7 @@ require 'config.php'
                     <li><a href="#">About me</li>
                     <li><a href="#">Contact</li>
                 </ul>
-                <div>
+                <div class="header-login">
                     <form action="Login.php" method="post">
                         <button type="submit" name="login-submit">Login</button>
                     </from>
