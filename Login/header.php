@@ -26,17 +26,20 @@ require 'config.php'
         </ul>
       </nav>
       <div class="header-login">
-                    <form action="Login.php" method="post">
-                        <button type="submit" name="login-submit">Login</button>
-                    </from>
-                    </form>
-                </div> 
-                <div class="header-login">
-                <form action="logout.inc.php" method="post">
-                        <button type="submit" name="logout-submit">Logout</button>
-                </div>
-            </nav>
-        </header>
+            <form action="Login.php" method="post">
+                <button type="submit" name="login-submit">Login</button>
+            </from>
+            
+        </div><div class="header-login">
+            <form action="Registration.php" method="post">
+                <button type="submit" name="logout-submit">Signup</button>
+        </div> 
+        <div class="header-login">
+            <form action="logout.inc.php" method="post">
+                <button type="submit" name="logout-submit">Logout</button>
+        </div>
+        </nav>
+    </header>
 
     </body>
 </html>
