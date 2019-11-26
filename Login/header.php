@@ -26,11 +26,12 @@ require 'config.php'
                     <form action="Login.php" method="post">
                         <button type="submit" name="login-submit">Login</button>
                     </from>
-                    <br>
-                    <form action="logout.inc.php" method="post">
-                        <button type="submit" name="logout-submit">Logout</button>
                     </form>
                 </div> 
+                <div class="header-login">
+                <form action="logout.inc.php" method="post">
+                        <button type="submit" name="logout-submit">Logout</button>
+                </div>
             </nav>
         </header>
 
