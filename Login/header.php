@@ -24,9 +24,11 @@ session_start();
                     <form action="Login.php" method="post">
                         <button type="submit" name="login-submit">Login</button>
                     </from>
+                    <br>
                     <form action="Registration.php" method="post">
                         <button type="submit">Signup</button>
                     </form>
+                    <br>
                     <form action="logout.inc.php" method="post">
                         <button type="submit" name="logout-submit">Logout</button>
                     </form>
