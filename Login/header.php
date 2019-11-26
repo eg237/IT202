@@ -20,7 +20,8 @@ session_start();
                     <li><a href="#">About me</li>
                     <li><a href="#">Contact</li>
                 </ul>
-                <div>
+                <button href="Login.php">Login</button>
+                <!-- <div>
                     <form action="login.inc.php" method="post">
                         <input type="text" name="user" placeholder="Username">
                         <input type="password" name="pass" placeholder="Password">
@@ -30,7 +31,7 @@ session_start();
                     <form action="logout.inc.php" method="post">
                         <button type="submit" name="logout-submit">Logout</button>
                     </form>
-                </div>
+                </div> -->
             </nav>
         </header>
 
