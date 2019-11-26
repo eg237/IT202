@@ -22,14 +22,14 @@ session_start();
                 </ul>
                 <div>
                     <form action="Login.php" method="post">
-                        <!-- <input type="text" name="user" placeholder="Username">
-                        <input type="password" name="pass" placeholder="Password"> -->
                         <button type="submit" name="login-submit">Login</button>
                     </from>
-                    <a href="Registration.php">Signup</a>
-                    <!-- <form action="logout.inc.php" method="post">
+                    <form action="Registration.php" method="post">
+                        <button type="submit">Signup</button>
+                    </form>
+                    <form action="logout.inc.php" method="post">
                         <button type="submit" name="logout-submit">Logout</button>
-                    </form> -->
+                    </form>
                 </div> 
             </nav>
         </header>
