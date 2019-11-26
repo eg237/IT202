@@ -19,8 +19,8 @@ require 'config.php'
           <img src="foxity.jpg" alt="mmtuts logo">
         </a>
         <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="LandingPage.html">Home</a></li>
+          <li><a href="index.php">Portfolio</a></li>
           <li><a href="#">About me</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
