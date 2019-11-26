@@ -24,7 +24,6 @@ error_reporting(E_ALL);
 <body>
     <div>
         <?php
-        //require('config.php');
         if(isset($_POST['create'])){
             $username   = $_POST['username'];
             $email       = $_POST['email'];
@@ -34,7 +33,8 @@ error_reporting(E_ALL);
             if($password != $confirm){
 				echo "Passwords don't match";
 				exit();
-		}
+		}else{
+            $hash = password_hash($password, PASSWORD_BCRYPT);
             $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$password')";
             $stmtinsert = $db->prepare($sql);
             $result = $stmtinsert->execute();
@@ -44,6 +44,16 @@ error_reporting(E_ALL);
                 echo 'There were errors while saving the data ';
             }
         }
+        }
+        //     $sql = "INSERT INTO `UserAccounts`(`username`, `email`, `pass`) VALUES ('$username','$email','$password')";
+        //     $stmtinsert = $db->prepare($sql);
+        //     $result = $stmtinsert->execute();
+        //     if($result){
+        //         echo 'Successfully saved.';
+        //     }else{
+        //         echo 'There were errors while saving the data ';
+        //     }
+        // }
         ?>
     </div>
 
