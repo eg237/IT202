@@ -8,6 +8,7 @@ session_start();
         <meta name = "description" content="This is an example of a meta description.">
         <meta name=viewport content="width=device-width, initial-scale=1">
         <title></title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
