@@ -38,7 +38,7 @@ require 'config.php'
         </div> 
         
         <div class="header-login">
-            <form action="logout.inc.php" method="post">
+            <form action="Registration.php" method="post">
                 <button type="submit" name="logout-submit">Logout</button>
             </form>
         </div>
