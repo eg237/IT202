@@ -20,18 +20,17 @@ session_start();
                     <li><a href="#">About me</li>
                     <li><a href="#">Contact</li>
                 </ul>
-                <button href="Login.php">Login</button>
-                <!-- <div>
-                    <form action="login.inc.php" method="post">
-                        <input type="text" name="user" placeholder="Username">
-                        <input type="password" name="pass" placeholder="Password">
+                <div>
+                    <form action="Login.php" method="post">
+                        <!-- <input type="text" name="user" placeholder="Username">
+                        <input type="password" name="pass" placeholder="Password"> -->
                         <button type="submit" name="login-submit">Login</button>
                     </from>
                     <a href="Registration.php">Signup</a>
-                    <form action="logout.inc.php" method="post">
+                    <!-- <form action="logout.inc.php" method="post">
                         <button type="submit" name="logout-submit">Logout</button>
-                    </form>
-                </div> -->
+                    </form> -->
+                </div> 
             </nav>
         </header>
 
