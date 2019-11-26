@@ -15,7 +15,7 @@ require 'config.php'
 
     <header>
       <nav class="nav-header-main">
-        <a class="header-logo" href="LandingPage.html">
+        <a class="header-logo" href="index.html">
           <img src="foxity.jpg" alt="mmtuts logo">
         </a>
         <ul>
