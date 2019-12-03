@@ -40,7 +40,7 @@ require 'config.php'
                 <button type="submit" name="logout-submit">Signup</button>
         </form>
         </div>
-        <div>
+        <div class="header-login">
         <form action="logout.inc.php" method="post">
                 <button type="submit" name="logout-submit">Logout</button>
         </form>
