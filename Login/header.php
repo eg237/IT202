@@ -31,14 +31,14 @@ require 'config.php'
             </from>
       </div>
         
-        <!-- <div class="header-login">
+        <div class="header-login">
             <form action="Registration.php" method="post">
-            </form> -->
+            </form>
         </div> 
         <div class="header-login">
-        <form action="Registration.php" method="post">
+        <!-- <form action="Registration.php" method="post">
                 <button type="submit" name="logout-submit">Signup</button>
-        </form>
+        </form> -->
         <form action="logout.inc.php" method="post">
                 <button type="submit" name="logout-submit">Logout</button>
         </form>
